@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Pet - AZIFUKA PET SHOP</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .pet-card {
+            max-width: 600px;
+            margin: 30px auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .pet-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 5px 5px 0 0;
+        }
+        .btn-primary {
+            background-color: #4CAF50;
+            border-color: #4CAF50;
+        }
+        .btn-primary:hover {
+            background-color: #45a049;
+            border-color: #45a049;
+        }
+        .pet-details {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">AZIFUKA PET SHOP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container my-5">
+        <div class="card pet-card">
+            <img id="petImage" src="" class="pet-image" alt="Pet Image">
+            <div class="pet-details">
+                <h2 id="petName" class="mb-3"></h2>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <p><strong>Breed:</strong> <span id="petBreed"></span></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>Price:</strong> $<span id="petPrice"></span></p>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <p><strong>Location:</strong> <span id="petLocation"></span></p>
+                    </div>
+                </div>
+                <form id="purchaseForm">
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Delivery Address</label>
+                        <textarea class="form-control" id="address" rows="3" required></textarea>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg">Complete Purchase</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <p>&copy; 2023 AZIFUKA PET SHOP. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script to load pet data -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get pet ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const petId = urlParams.get('id');
+            
+            // Sample pet data (in a real app, this would come from a database/API)
+            const pets = [
+                {
+                    name: "EMEKA",
+                    breed: "Scottish Terrier",
+                    price: "500",
+                    location: "Lagos, Nigeria",
+                    image: "images/scottish-terrier.jpeg"
+                },
+                {
+                    name: "GUT",
+                    breed: "Scottish Terrier",
+                    price: "500",
+                    location: "Abuja, Nigeria",
+                    image: "images/scottish-terrier.jpeg"
+                },
+                {
+                    name: "CHIDI",
+                    breed: "French Bulldog",
+                    price: "500",
+                    location: "Port Harcourt, Nigeria",
+                    image: "images/french-bulldog.jpeg"
+                },
+                {
+                    name: "AVOMIDE",
+                    breed: "Boxer",
+                    price: "500",
+                    location: "Ibadan, Nigeria",
+                    image: "images/boxer.jpeg"
+                }
+            ];
+            
+            // Load pet data
+            if (petId && pets[petId]) {
+                const pet = pets[petId];
+                document.getElementById('petName').textContent = pet.name;
+                document.getElementById('petBreed').textContent = pet.breed;
+                document.getElementById('petPrice').textContent = pet.price;
+                document.getElementById('petLocation').textContent = pet.location;
+                document.getElementById('petImage').src = pet.image;
+                document.getElementById('petImage').alt = pet.name + ' - ' + pet.breed;
+            } else {
+                // Redirect if no valid pet ID
+                window.location.href = 'index.html';
+            }
+            
+            // Form submission
+            document.getElementById('purchaseForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                // In a real app, you would process the purchase here
+                alert('Purchase completed successfully! We will contact you shortly.');
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>

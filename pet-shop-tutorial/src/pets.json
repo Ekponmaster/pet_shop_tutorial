@@ -1,0 +1,130 @@
+[
+  {
+    "id": 0,
+    "name": "Emeka",
+    "picture": "images/scottish-terrier.jpeg",
+    "price": 350000,
+    "breed": "Scottish Terrier",
+    "location": "Lagos"
+  },
+  {
+    "id": 1,
+    "name": "Chidi",
+    "picture": "images/scottish-terrier.jpeg",
+    "price": 320000,
+    "breed": "Scottish Terrier",
+    "location": "Abuja"
+  },
+  {
+    "id": 2,
+    "name": "ifunaya",
+    "picture": "images/french-bulldog.jpeg",
+    "price": 450000,
+    "breed": "French Bulldog",
+    "location": "Port Harcourt"
+  },
+  {
+    "id": 3,
+    "name": "Ayomide",
+    "picture": "images/boxer.jpeg",
+    "price": 280000,
+    "breed": "Boxer",
+    "location": "Enugu"
+  },
+  {
+    "id": 4,
+    "name": "Obinna",
+    "picture": "images/french-bulldog.jpeg",
+    "price": 420000,
+    "breed": "French Bulldog",
+    "location": "Kano"
+  },
+  {
+    "id": 5,
+    "name": "Adanna",
+    "picture": "images/french-bulldog.jpeg",
+    "price": 380000,
+    "breed": "French Bulldog",
+    "location": "Ibadan"
+  },
+  {
+    "id": 6,
+    "name": "Chinedu",
+    "picture": "images/golden-retriever.jpeg",
+    "price": 550000,
+    "breed": "Golden Retriever",
+    "location": "Uyo"
+  },
+  {
+    "id": 7,
+    "name": "Ebere",
+    "picture": "images/golden-retriever.jpeg",
+    "price": 520000,
+    "breed": "Golden Retriever",
+    "location": "Calabar"
+  },
+  {
+    "id": 8,
+    "name": "Ifeoma",
+    "picture": "images/french-bulldog.jpeg",
+    "price": 400000,
+    "breed": "French Bulldog",
+    "location": "Benin City"
+  },
+  {
+    "id": 9,
+    "name": "Chukwuebuka",
+    "picture": "images/boxer.jpeg",
+    "price": 300000,
+    "breed": "Boxer",
+    "location": "Owerri"
+  },
+  {
+    "id": 10,
+    "name": "Adebayo",
+    "picture": "images/boxer.jpeg",
+    "price": 270000,
+    "breed": "Boxer",
+    "location": "Abeokuta"
+  },
+  {
+    "id": 11,
+    "name": "Folake",
+    "picture": "images/scottish-terrier.jpeg",
+    "price": 330000,
+    "breed": "Scottish Terrier",
+    "location": "Warri"
+  },
+  {
+    "id": 12,
+    "name": "Ikenna",
+    "picture": "images/french-bulldog.jpeg",
+    "price": 470000,
+    "breed": "French Bulldog",
+    "location": "Kaduna"
+  },
+  {
+    "id": 13,
+    "name": "Zainab",
+    "picture": "images/golden-retriever.jpeg",
+    "price": 600000,
+    "breed": "Golden Retriever",
+    "location": "Jos"
+  },
+  {
+    "id": 14,
+    "name": "Olumide",
+    "picture": "images/golden-retriever.jpeg",
+    "price": 500000,
+    "breed": "Golden Retriever",
+    "location": "Akure"
+  },
+  {
+    "id": 15,
+    "name": "Yemi",
+    "picture": "images/golden-retriever.jpeg",
+    "price": 480000,
+    "breed": "Golden Retriever",
+    "location": "Ilorin"
+  }
+]
